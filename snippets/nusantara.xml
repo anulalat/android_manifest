@@ -11,6 +11,12 @@
            fetch="https://github.com/Nusantara-ROM/" 
            revision="11" />
   
+  <!-- Anulalat remote -->
+  <remote  name="anulalat"
+           fetch="https://github.com/anulalat/"
+           revision="11"
+           sync-j="16" />
+  
   <!-- Device remote -->
   <remote  name="device"
            fetch="https://github.com/NusantaraROM-devices/"
@@ -25,7 +31,7 @@
            fetch="https://gitlab.com/" />
   
     <!-- Build -->
-  <project path="build/make" name="android_build" remote="nad" >
+  <project path="build/make" name="android_build" remote="anulalat" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -39,7 +45,7 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
-  <project path="android" name="android_manifest" remote="nad" />
+  <project path="android" name="android_manifest" remote="anulalat" />
   <project path="art" name="android_art" remote="nad" />
   <project path="bionic" name="android_bionic" remote="nad" />
   <project path="build/blueprint" name="android_build_blueprint" remote="nad" />
@@ -64,9 +70,9 @@
 
   <!-- Frameworks -->
   <project path="frameworks/native" name="android_frameworks_native" remote="nad" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="nad" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="anulalat" />
   <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="nad" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="nad" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="anulalat" />
   <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="nad" />
   <project path="frameworks/av" name="android_frameworks_av" remote="nad" />
   <project path="frameworks/libs/systemui" name="syberia-project/platform_frameworks_libs_systemui" remote="github" revision="11.0"/>
@@ -136,10 +142,10 @@
   <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="nad" />
   <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="nad" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="nad" />
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="nad" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="anulalat" />
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="nad" />
   <project path="packages/apps/NusantaraWings" name="android_packages_apps_NusantaraWings" remote="nad" /> 
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="nad" /> 
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="anulalat" /> 
   <project path="packages/apps/Plugins" name="android_packages_apps_Plugins" remote="nad" />
   <project path="packages/apps/NusantaraPapers" name="android_packages_apps_NusantaraPapers" remote="nad" />  
   <project path="packages/nusantara/fonts" name="android_packages_nusantara_fonts" remote="wip" />
